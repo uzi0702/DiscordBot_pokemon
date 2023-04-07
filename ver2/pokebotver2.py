@@ -1,10 +1,11 @@
+import imp
 from inspect import trace
 from tokenize import Double
 import discord
 from gql import Client, gql
 from gql.transport.aiohttp import AIOHTTPTransport
 import json
-
+import os
 
 
 transport = AIOHTTPTransport(url= "https://beta.pokeapi.co/graphql/v1beta")
@@ -13,7 +14,7 @@ gql_client = Client(transport=transport, fetch_schema_from_transport=True)
 intents = discord.Intents.default()
 intents.message_content = True
 
-TOKEN = "MTA4NDgzMTYyODE3NTYwNTg4Mg.G2Tv9w.3gUvPP2WiR66P92k58rwcBSpB4okqeT3oUma-k"
+TOKEN = os.env
 
 discord_client = discord.Client(intents=intents)
 
