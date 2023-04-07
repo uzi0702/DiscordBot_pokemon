@@ -2,7 +2,6 @@ import discord
 from gql import Client, gql
 from gql.transport.aiohttp import AIOHTTPTransport
 import json
-import os
 
 
 transport = AIOHTTPTransport(url= "https://beta.pokeapi.co/graphql/v1beta")
