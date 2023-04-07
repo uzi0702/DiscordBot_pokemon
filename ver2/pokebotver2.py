@@ -14,7 +14,7 @@ gql_client = Client(transport=transport, fetch_schema_from_transport=True)
 intents = discord.Intents.default()
 intents.message_content = True
 
-TOKEN = os.env
+TOKEN = ""
 
 discord_client = discord.Client(intents=intents)
 
